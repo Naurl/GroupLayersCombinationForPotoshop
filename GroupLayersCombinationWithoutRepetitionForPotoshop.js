@@ -67,7 +67,9 @@ function Save() {
         f.create()
     }
 
-    var saveFile = new File(outPath + "/" + fName + "/" + "PNG_RESULT_" + recursiveCount + "_" + recursiveResult[recursiveCount].toString() + ".png"); pngSaveOptions = new PNGSaveOptions(); pngSaveOptions.interlaced = false; app.activeDocument.saveAs(saveFile, pngSaveOptions, true, Extension.LOWERCASE);
+    var saveFile = new File(outPath + "/" + fName + "/" + "PNG_RESULT_" + recursiveCount + "_" + recursiveResult[recursiveCount].toString() + ".png");
+    pngSaveOptions = new PNGSaveOptions(); pngSaveOptions.interlaced = false;
+    app.activeDocument.saveAs(saveFile, pngSaveOptions, true, Extension.LOWERCASE);
 }
 
 function CombinationPossible(){
