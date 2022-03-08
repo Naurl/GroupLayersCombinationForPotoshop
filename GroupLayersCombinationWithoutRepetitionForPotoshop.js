@@ -58,8 +58,16 @@ function LayersCombinationValid(currentResult){
 }
 
 function Save() {
-    var outFolder = app.activeDocument; var outPath = outFolder.path; var fName = "DeliveryTruckFactory"; var f = new Folder(outPath + "/" + fName); if (!f.exists) { f.create() }
-    var saveFile = new File(outPath + "/" + fName + "/" + "Truck_" + recursiveCount + "_" + recursiveResult[recursiveCount].toString() + ".png"); pngSaveOptions = new PNGSaveOptions(); pngSaveOptions.interlaced = false; app.activeDocument.saveAs(saveFile, pngSaveOptions, true, Extension.LOWERCASE);
+    var outFolder = app.activeDocument;
+    var outPath = outFolder.path;
+    var fName = "CombinationResults";
+    var f = new Folder(outPath + "/" + fName);
+    
+    if (!f.exists) { 
+        f.create()
+    }
+
+    var saveFile = new File(outPath + "/" + fName + "/" + "PNG_RESULT_" + recursiveCount + "_" + recursiveResult[recursiveCount].toString() + ".png"); pngSaveOptions = new PNGSaveOptions(); pngSaveOptions.interlaced = false; app.activeDocument.saveAs(saveFile, pngSaveOptions, true, Extension.LOWERCASE);
 }
 
 function CombinationPossible(){
