@@ -4,10 +4,10 @@ Do combinations possibles with or without repetition of the all groups layers
 
 ---------------------------------------------------
 
-You can use the "GroupLayersCombinationWithoutRepetitionForPotoshop.js" or "GroupLayersCombinationWithRepetitionForPotoshop.js"scripting files as command line sequence in pothoshop in order to combine
-all groups layers with or with out repetition.
+You can use the "GroupLayersCombinationWithoutRepetitionForPotoshop.js" or "GroupLayersCombinationWithRepetitionForPotoshop.js"scripting files as command line sequence in pothoshop in order to combine all groups layers with or with out repetition.
 
 If you want use "GroupLayersCombinationWithoutRepetitionForPotoshop.js" file, you have to select between 3 option:
+
 0 - Do nothing :
 
 The command sequence do nothing.
