@@ -528,7 +528,7 @@ function Revert() {
 
 var scriptingFileName = "Scripting.js";
 
-var count = prompt("Set the option that you want: \n 0 - Do nothing. \n Positive number - Do the combinations possible of the all groups layers. (Use scripting file) \n Negative number - Do the combinations possible of the all groups layers. (Do not use scripting file) ", "");
+var count = prompt("Set the option that you want: \n0 - Do nothing. \nPositive number - Combine all groups layers.(Use scripting file) \nNegative number - Combine all groups layers.(Do not use scripting file)", "");
 
 if(!count)
 {
