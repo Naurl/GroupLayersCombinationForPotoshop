@@ -381,6 +381,11 @@ function Visible() {
     
     while(recursiveCount < combinationsPossible)
     {
+        if(maxLimit && maxLimit > 0 && recursiveCount > maxLimit)
+        {
+            break;
+        }
+
         if(!recursiveResult[recursiveCount])
         {
             recursiveResult[recursiveCount] = [];
@@ -429,6 +434,7 @@ function LayersCombinationValid(currentResult){
         }
 
         var GrpsCount = app.activeDocument.layerSets.length;
+        
         if(count == GrpsCount){
             return false;
         }
@@ -530,22 +536,19 @@ var scriptingFileName = "Scripting.js";
 
 var count = prompt("Set the option that you want: \n0 - Do nothing. \nPositive number - Combine all groups layers.(Use scripting file) \nNegative number - Combine all groups layers.(Do not use scripting file)", "");
 
-if(!count)
-{
-    count = 0;
-}
-
 var recursiveCount = 0;
 var recursiveResult = {};
 var combinationsPossible = CombinationPossible();
+var maxLimit;
 
-
-if(count != 0 && combinationsPossible > 0) {
+if(count && combinationsPossible > 0) {
 
     if(count > 0)
     {
         readScriptingFile();
     }
+
+    maxLimit = prompt("Posible combinations: " + combinationsPossible + ". Do you want to set a quantity limit?: \Negative number or 0 else.\Positive number, it will be used as quantity limit.", "");
 
     Visible();
 }
